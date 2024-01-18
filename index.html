@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: large;
+      }
+
+      div {
+        text-align: center;
+      }
+
+      div:first-child {
+        border: 3px solid black;
+        transform: scale(0.9);
+      }
+
+      div:first-child object {
+        transform: scale(0.8);
+      }
+
+      /* Media query for screens with a maximum width of 600px (adjust as needed) */
+      @media only screen and (max-width: 600px) {
+        div:first-child {
+          transform: scale(0.8);
+        }
+        div:first-child object {
+          transform: scale(0.9);
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Scan Me</h1>
+      <div>
+        <object data="qr-code.svg" type="image/svg+xml">
+          <img src="qr-code.jpeg" alt="QR Code" />
+        </object>
+      </div>
+    </div>
+  </body>
+</html>
