@@ -22,21 +22,15 @@
 
       div:first-child {
         border: 3px solid black;
-        transform: scale(0.9);
+      }
+      img {
+        max-width: 90%;
+        height: auto;
       }
 
-      div:first-child object {
-        transform: scale(0.8);
-      }
-
-      /* Media query for screens with a maximum width of 600px (adjust as needed) */
       @media only screen and (max-width: 600px) {
-        div:first-child {
-          transform: scale(0.8);
-        }
-        div:first-child object {
-          transform: scale(0.9);
-          width: 100%;
+        div {
+          max-width: 80%;
         }
       }
     </style>
@@ -44,11 +38,7 @@
   <body>
     <div>
       <h1>Scan Me</h1>
-      <div>
-        <object data="qr-code.svg" type="image/svg+xml">
-          <img src="qr-code.jpeg" alt="QR Code" />
-        </object>
-      </div>
+      <img src="qr-code.jpeg" alt="QR Code" />
     </div>
   </body>
 </html>
